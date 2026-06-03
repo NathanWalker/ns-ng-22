@@ -1,3 +1,370 @@
+/* App-wide styles. See http://docs.nativescript.org/ui/styling for reference. */
+/* @import '@nativescript/theme/css/core.css';
+@import '@nativescript/theme/css/default.css'; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+Button {
+  border: 0;
+  background-color: transparent;
+  text-transform: none;
+  min-width: 0;
+  min-height: 0;
+  android-elevation: 0;
+  android-dynamic-elevation-offset: 0;
+  color: #fff;
+}
+
+.h-center {
+  horizontal-align: center;
+}
+.h-right {
+  horizontal-align: right;
+}
+
+.page-bg {
+  background-color: #08060f;
+}
+
+/* ActionBar */
+.action-bar {
+  background-color: #08060f;
+  color: #ffffff;
+}
+
+/* Hero */
+.hero {
+  padding: 24 24 30 24;
+  background: linear-gradient(135deg, #e5006d, #9d00ff, #5b16e0);
+  border-radius: 0 0 30 30;
+}
+.hero-eyebrow {
+  color: #ffd9ec;
+  font-size: 13;
+  font-weight: 700;
+  letter-spacing: 0.25;
+  opacity: 0.92;
+}
+.hero-title {
+  color: #ffffff;
+  font-size: 92;
+  font-weight: 800;
+  margin: -8 0 0 0;
+}
+.hero-subtitle {
+  color: #ffffff;
+  font-size: 23;
+  font-weight: 700;
+  margin-top: 2;
+}
+.hero-meta {
+  color: #fbe6f2;
+  font-size: 13;
+  margin-top: 12;
+  opacity: 0.92;
+}
+
+/* Search */
+.search-wrap {
+  padding: 18 20 4 20;
+}
+.search-field {
+  background-color: #14111f;
+  border-radius: 14;
+  border-width: 1;
+  border-color: #2a2440;
+  color: #ffffff;
+  padding: 12 16;
+  font-size: 16;
+  placeholder-color: #6e6880;
+}
+
+/* Category chips */
+.chips-row {
+  padding: 6 14 2 14;
+}
+.chip {
+  background-color: #14111f;
+  border-width: 1;
+  border-color: #2a2440;
+  border-radius: 22;
+  padding: 8 16;
+  margin: 5 4;
+  font-size: 13;
+}
+.chip-active {
+  background-color: #9d00ff;
+  /* background: linear-gradient(to right, #e5006d, #9d00ff); */
+  border-color: transparent;
+  border-radius: 22;
+  padding: 8 16;
+  margin: 5 4;
+  font-size: 13;
+  font-weight: 700;
+}
+
+.result-count {
+  color: #6e6880;
+  font-size: 12;
+  padding: 12 24 2 24;
+  text-transform: uppercase;
+  letter-spacing: 0.12;
+}
+
+/* Feature cards */
+.cards {
+  padding: 8 16 0 16;
+}
+.feature-card {
+  background-color: #14111f;
+  border-width: 1;
+  border-color: #241f33;
+  border-radius: 18;
+  margin: 8 0;
+}
+.card-dot {
+  width: 12;
+  height: 12;
+  border-radius: 6;
+  margin: 0 0 0 18;
+}
+.card-glyph {
+  font-size: 30;
+  padding: 0 12 0 12;
+}
+.card-title {
+  color: #ffffff;
+  font-size: 18;
+  font-weight: 700;
+  padding: 16 8 0 4;
+}
+.card-tagline {
+  color: #9a95ac;
+  font-size: 13;
+  padding: 3 8 0 4;
+}
+.card-badge {
+  font-size: 11;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12;
+  padding: 7 8 16 4;
+}
+.card-chevron {
+  color: #4a4560;
+  font-size: 28;
+  padding: 0 18 0 8;
+}
+
+/* Empty state */
+.empty-state {
+  padding: 60 40;
+}
+.empty-glyph {
+  font-size: 46;
+  text-align: center;
+}
+.empty-text {
+  color: #9a95ac;
+  font-size: 16;
+  text-align: center;
+  margin-top: 12;
+}
+.footer-note {
+  color: #423d57;
+  font-size: 12;
+  text-align: center;
+  padding: 22 0 40 0;
+}
+
+/* Detail page */
+.detail-hero {
+  padding: 22 24 28 24;
+  border-radius: 0 0 26 26;
+}
+.detail-glyph {
+  font-size: 52;
+}
+.detail-cat {
+  color: #ffffff;
+  opacity: 0.85;
+  font-size: 12;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2;
+  margin-top: 12;
+}
+.detail-title {
+  color: #ffffff;
+  font-size: 31;
+  font-weight: 800;
+  margin-top: 6;
+}
+.detail-tagline {
+  color: #ffffff;
+  opacity: 0.92;
+  font-size: 16;
+  margin-top: 8;
+}
+.detail-body {
+  padding: 18 24 0 24;
+}
+.section-label {
+  color: #a39db8;
+  font-size: 15;
+  font-weight: 700;
+  margin: 24 0 10 0;
+}
+.body-text {
+  color: #c9c4da;
+  font-size: 16;
+  line-height: 3;
+}
+.why-box {
+  background-color: #141022;
+  border-width: 1;
+  border-color: #2a2440;
+  border-radius: 12;
+  padding: 16;
+}
+.why-text {
+  color: #d8d3e6;
+  font-size: 15;
+  line-height: 3;
+  font-style: italic;
+}
+.code-block {
+  background-color: #0c0a14;
+  border-width: 1;
+  border-color: #221c33;
+  border-radius: 14;
+  padding: 16;
+  margin-top: 4;
+}
+.code-text {
+  color: #d7e0f0;
+  font-family: "Courier New", monospace;
+  font-size: 13;
+  line-height: 3;
+}
+
+/* Live demos */
+.demo-box {
+  background-color: #14111f;
+  border-width: 1;
+  border-color: #2a2440;
+  border-radius: 16;
+  padding: 18;
+  margin-top: 4;
+}
+.demo-readout {
+  color: #ffffff;
+  font-family: "Courier New", monospace;
+  font-size: 16;
+}
+.demo-sub {
+  color: #9a95ac;
+  font-family: "Courier New", monospace;
+  font-size: 14;
+  margin-top: 4;
+}
+.demo-status {
+  color: #19c37d;
+  font-size: 14;
+  font-weight: 700;
+  margin-top: 12;
+}
+.is-settling {
+  color: #ff6b00;
+}
+.demo-hint {
+  color: #7c7690;
+  font-size: 13;
+  margin-top: 12;
+  line-height: 3;
+}
+.demo-controls {
+  margin-top: 14;
+}
+.demo-btn {
+  background: linear-gradient(to right, #e5006d, #9d00ff);
+  color: #ffffff;
+  font-size: 18;
+  font-weight: 700;
+  border-radius: 12;
+  padding: 12;
+  margin: 6 4 4;
+}
+.demo-btn-ghost {
+  background-color: #1c1730;
+  color: #c9c4da;
+  font-size: 14;
+  font-weight: 600;
+  border-radius: 12;
+  border-width: 1;
+  border-color: #2a2440;
+  padding: 12;
+  margin: 6 4 4;
+}
+.since-badge {
+  color: #4a4560;
+  font-size: 12;
+  text-transform: uppercase;
+  letter-spacing: 0.12;
+  margin: 26 0 40 0;
+  text-align: center;
+}
+
+/* @defer demo */
+.demo-loading {
+  padding: 8 0;
+}
+.demo-spinner {
+  color: #e5006d;
+  margin-right: 12;
+}
+.deferred-panel {
+  background: linear-gradient(135deg, #e5006d, #9d00ff);
+  border-radius: 14;
+  padding: 22;
+}
+.deferred-glyph {
+  font-size: 40;
+}
+.deferred-title {
+  color: #ffffff;
+  font-size: 20;
+  font-weight: 800;
+  margin-top: 6;
+}
+.deferred-body {
+  color: #ffffff;
+  opacity: 0.92;
+  font-size: 14;
+  line-height: 3;
+  margin-top: 6;
+}
+
+/* Feature demos */
+.demo-field-label {
+  color: #7c7690;
+  font-size: 12;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1;
+  margin-bottom: 4;
+}
+.demo-error {
+  color: #fb7185;
+  font-size: 13;
+  margin-top: 4;
+}
+.demo-ok {
+  color: #34d399;
+  font-size: 13;
+  margin-top: 4;
+}
+.demo-switch-stage {
+  padding: 6 0;
+}

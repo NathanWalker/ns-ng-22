@@ -1,9 +1,10 @@
 import { Routes } from '@angular/router';
-import { PeopleComponent } from './people/person.component';
-import { PersonDetailComponent } from './people/person-detail.component';
+import { ExplorerComponent } from './explorer/explorer.component';
+import { FeatureDetailComponent } from './explorer/feature-detail.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/items', pathMatch: 'full' },
-  { path: 'items', component: PeopleComponent },
-  { path: 'item/:id', component: PersonDetailComponent },
+  { path: '', redirectTo: '/explore', pathMatch: 'full' },
+  { path: 'explore', component: ExplorerComponent },
+  // :id binds to the component's id input.
+  { path: 'feature/:id', component: FeatureDetailComponent },
 ];

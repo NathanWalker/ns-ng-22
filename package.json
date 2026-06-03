@@ -14,6 +14,7 @@
     "@angular/router": "22.0.0",
     "@nativescript/angular": "22.0.0-dev.0",
     "@nativescript/core": "~9.0.20",
+    "@nstudio/nstreamdown": "^1.0.6",
     "rxjs": "~7.8.0",
     "zone.js": "~0.16.0"
   },
@@ -21,17 +22,18 @@
     "@angular-devkit/build-angular": "22.0.0",
     "@angular/build": "22.0.0",
     "@angular/compiler-cli": "22.0.0",
-    "@nativescript/ios": "9.1.0-dev.10",
+    "@nativescript/android": "~9.0.0",
+    "@nativescript/ios": "~9.0.0",
     "@nativescript/tailwind": "^2.1.0",
     "@nativescript/types": "~9.0.0",
     "@nativescript/webpack": "~5.0.35",
     "@ngtools/webpack": "22.0.0",
-    "patch-package": "~8.0.1",
     "tailwindcss": "~3.4.0",
     "typescript": "6.0.3"
   },
   "scripts": {
-    "postinstall": "patch-package"
+    "ios": "ns debug ios --no-hmr",
+    "android": "ns debug android --no-hmr"
   },
   "overrides": {
     "@angular-devkit/build-angular": "22.0.0",

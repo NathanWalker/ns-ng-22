@@ -1,8 +1,6 @@
-/**
- * NativeScript Polyfills
- */
+// NativeScript polyfills
 
-// Install @nativescript/core polyfills (XHR, setTimeout, requestAnimationFrame)
+// Core polyfills (XHR, setTimeout, requestAnimationFrame).
 import '@nativescript/core/globals';
-// Install @nativescript/angular specific polyfills
+// Angular-specific polyfills.
 import '@nativescript/angular/polyfills';

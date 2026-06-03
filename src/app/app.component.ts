@@ -1,4 +1,4 @@
-import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
+import { Component, NO_ERRORS_SCHEMA, OnDestroy, OnInit } from '@angular/core';
 import { PageRouterOutlet } from '@nativescript/angular';
 
 @Component({
@@ -7,4 +7,13 @@ import { PageRouterOutlet } from '@nativescript/angular';
   imports: [PageRouterOutlet],
   schemas: [NO_ERRORS_SCHEMA],
 })
-export class AppComponent {}
+export class AppComponent implements OnInit, OnDestroy {
+
+  ngOnInit() {
+    console.log('ngOnInit');
+  }
+
+  ngOnDestroy() {
+    console.log('ngOnDestroy');
+  }
+}
