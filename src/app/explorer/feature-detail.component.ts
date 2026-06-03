@@ -20,6 +20,7 @@ import { FeaturesService } from './features.service';
 export class FeatureDetailComponent {
   private readonly store = inject(FeaturesService);
   private readonly router = inject(RouterExtensions);
+  isAndroid = __ANDROID__;
 
   // Bound from the route param.
   readonly id = input<string>('');

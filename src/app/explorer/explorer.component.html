@@ -1,4 +1,6 @@
-<ActionBar title="Angular 22 Explorer" class="text-white"></ActionBar>
+<ActionBar title="Angular 22 Explorer" class="text-white" [ngClass]="{
+  'bg-black': isAndroid
+}"></ActionBar>
 
 <GridLayout rows="*" class="page-bg" iosOverflowSafeArea="true">
   <ScrollView row="0">

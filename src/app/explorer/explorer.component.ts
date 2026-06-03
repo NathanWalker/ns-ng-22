@@ -12,6 +12,7 @@ import { FeaturesService } from './features.service';
 export class ExplorerComponent {
   protected readonly store = inject(FeaturesService);
   private readonly router = inject(RouterExtensions);
+  isAndroid = __ANDROID__;
 
   onSearch(args: any) {
     this.store.query.set(args?.object?.text ?? '');

@@ -1,5 +1,7 @@
 <!-- The ActionBar gives an automatic native back button since each route is pushed as a page. -->
-<ActionBar [title]="feature()?.title || 'Feature'"></ActionBar>
+<ActionBar [title]="feature()?.title || 'Feature'" class="text-white" [ngClass]="{
+  'bg-black': isAndroid
+}"></ActionBar>
 
 <GridLayout class="page-bg">
   <ScrollView>
