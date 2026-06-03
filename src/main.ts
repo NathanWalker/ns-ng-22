@@ -15,6 +15,12 @@ import { routes } from './app/app.routes';
 Trace.enable();
 Trace.setCategories('ns-route-reuse-strategy,ns-router');
 
+if (__APPLE__) {
+  const keyboardManager = IQKeyboardManager.shared;
+  keyboardManager.isEnabled = true;
+  keyboardManager.enableAutoToolbar = true;
+}
+
 runNativeScriptAngularApp({
   appModuleBootstrap: () => {
     if (__APPLE__) {
